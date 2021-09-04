@@ -22,7 +22,7 @@ d) La edad y legajo del que cursa más materias. (Sin importar su género)
 
 
 
-		int cantidadMaterias;
+
 		char sexoIngresado;
 		int notaPromedio;
 		int edadIngresada;
@@ -38,6 +38,7 @@ int main(void) {
 		// el legajo lo voy a limitar a 4 digitos, pinto
 		int legajoIngresado;
 		char tipoCursada;
+		int cantidadMaterias;
 
 		char consultaVueltas='s';
 
@@ -58,6 +59,13 @@ int main(void) {
 			{
 				printf("Por favor ingrese el tipo de cursada(L: 'libre' - P: 'presencial' – R: 'remota') : ");
 				scanf("%s", &tipoCursada);
+			}
+			printf("Por favor ingrese la cantidad de materias a cursar: ");
+			scanf("%d", &cantidadMaterias);
+			while(cantidadMaterias<=0 || cantidadMaterias>8)
+			{
+				printf("Por favor ingrese la cantidad de materias correcta: ");
+				scanf("%d", &cantidadMaterias);
 			}
 
 
