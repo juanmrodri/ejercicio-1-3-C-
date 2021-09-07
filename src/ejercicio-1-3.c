@@ -23,7 +23,7 @@ d) La edad y legajo del que cursa más materias. (Sin importar su género)
 
 
 
-		char sexoIngresado;
+
 		int notaPromedio;
 		int edadIngresada;
  */
@@ -39,6 +39,8 @@ int main(void) {
 		int legajoIngresado;
 		char tipoCursada;
 		int cantidadMaterias;
+		char sexoIngresado;
+		float notaPromedio;
 
 		char consultaVueltas='s';
 
@@ -53,6 +55,7 @@ int main(void) {
 				printf("Por favor ingrese un legajo correcto: ");
 				scanf("%d", &legajoIngresado);
 			}
+			printf("-------------------------------------------\n");
 			printf("Por favor ingrese el tipo de cursada: ");
 			scanf("%s", &tipoCursada);
 			while(tipoCursada!='L' && tipoCursada!='P' && tipoCursada!='R')
@@ -60,6 +63,7 @@ int main(void) {
 				printf("Por favor ingrese el tipo de cursada(L: 'libre' - P: 'presencial' – R: 'remota') : ");
 				scanf("%s", &tipoCursada);
 			}
+			printf("-------------------------------------------\n");
 			printf("Por favor ingrese la cantidad de materias a cursar: ");
 			scanf("%d", &cantidadMaterias);
 			while(cantidadMaterias<=0 || cantidadMaterias>8)
@@ -67,12 +71,19 @@ int main(void) {
 				printf("Por favor ingrese la cantidad de materias correcta: ");
 				scanf("%d", &cantidadMaterias);
 			}
-
+			printf("-------------------------------------------\n");
+			printf("Por favor ingrese el sexo (F: 'femenino' – M: 'masculino' , O: 'no binario') : ");
+			scanf("%s",sexoIngresado);
+			while(sexoIngresado!='F' && sexoIngresado!='M' && sexoIngresado!='O')
+			{
+				printf("Por favor ingrese el sexo (F: 'femenino' – M: 'masculino' , O: 'no binario') : ");
+				scanf("%s",sexoIngresado);
+			}
 
 
 
 			// consulta para seguir
-			printf("Quiere ingresar otro alumno?");
+			printf("Quiere ingresar otro alumno? ");
 			scanf("%s", &consultaVueltas);
 		}
 
